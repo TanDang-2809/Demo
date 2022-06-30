@@ -1,0 +1,48 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "code": "MSV-02",
+      "gender": "male",
+      "firstName": "A",
+      "lastName": "Văn",
+      "dob": "1222/1/1",
+      "email": "tandmps1366dasdada.com",
+      "phone": "123-456-7899",
+      "picture": ""
+    },
+    {
+      "code": "DSD",
+      "gender": "ĐÁ",
+      "firstName": "ÁDA",
+      "lastName": "ADASD",
+      "dob": "ÁDA",
+      "email": "ADAS",
+      "phone": "ADAS",
+      "picture": "ÁDA",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "profile": {
+    "name": "Tân Đặng",
+    "age": 21,
+    "gender": "male"
+  }
+}

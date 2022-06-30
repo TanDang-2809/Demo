@@ -1,0 +1,25 @@
+<div class="tb_student">
+  <button class="button button3" (click)="addStudent()">Thêm sinh viên</button>
+  <table style="border-collapse: collapse;">
+    <tr>
+      <td>Hành động</td>
+      <th>Id</th>
+      <th>Mã sinh viên</th>
+      <th>Giới tính</th>
+      <th>Tên</th>
+      <th>Họ</th>
+      <th>Email</th>
+      <th>Điện thoại</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <th><button class="button button4" (click)="deleteStudent(student.id)">Xóa</button></th>
+      <td>{{ student?.id }}</td>
+      <td>{{ student?.code }}</td>
+      <td>{{ student?.gender }}</td>
+      <td>{{ student?.firstName}}</td>
+      <td>{{ student?.lastName }}</td>
+      <td>{{ student?.email }}</td>
+      <td>{{ student?.phone }}</td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,32 @@
+.postCss {
+    color: red;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  tr:hover {
+    background-color: beige;
+  }
+  
+//   tr:nth-child(even) {
+//     background-color: #dddddd;
+//   }
+
+.badge {
+    position: relative;
+    top: -10px;
+    left: -7px;
+    font-size: x-small;
+    padding: 1px 5px 1px 5px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}

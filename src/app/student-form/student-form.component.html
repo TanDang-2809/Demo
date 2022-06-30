@@ -1,0 +1,20 @@
+<form class="form_student" action="" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <h1>Nhận thêm một sinh viên mới</h1>
+  <label for="id">Mã sinh viên : </label>
+  <input type="text" id="id" name="id" formControlName="code"><br><br>
+  <label for="gioitinh">Giới tính : </label>
+  <input type="text" id="gioitinh" name="gioitinh" formControlName="gender"><br><br>
+  <label for="ten">Tên:</label>
+  <input type="text" id="ten" name="ten" formControlName="firstName"><br><br>
+  <label for="ho">Họ:</label>
+  <input type="text" id="Ho" name="Ho" formControlName="lastName"><br><br>
+  <label for="ntn">Ngày tháng năm :</label>
+  <input type="text" id="ntn" name="ntn" formControlName="dob"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" formControlName="email"><br><br>
+  <label for="dienthoai">SĐT :</label>
+  <input type="text" id="dienthoai" name="dienthoai" formControlName="phone"><br><br>
+  <label for="hình">Hinh :</label>
+  <input type="text" id="hinh" name="hinh" formControlName="picture"><br><br>
+  <button type="submit" [disabled]="!studentForm.valid">Thêm</button>
+</form>

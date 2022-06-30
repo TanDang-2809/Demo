@@ -1,0 +1,12 @@
+<div class="header">
+  <!-- <app-home></app-home> -->
+  <a [routerLink]="['/home']" routerLinkActive="router-link-active">Trang chủ</a> |
+  <!-- <a [routerLink]="['/about']" routerLinkActive="router-link-active">Đi tới About</a> | -->
+  <!-- <a [routerLink]="['/form']" routerLinkActive="router-link-active">Đi tới Form</a> | -->
+
+  <a [routerLink]="['/students']" routerLinkActive="router-link-active">Quản lý sinh viên</a>
+  <span class="badge">{{totalStudent}}</span>|
+  <!-- <a [routerLink]="['/reactiveform']" routerLinkActive="router-link-active">Đi tới ReactiveForm</a> -->
+</div>
+<router-outlet></router-outlet>
+<!-- điều khiển những component -->

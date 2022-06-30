@@ -1,0 +1,43 @@
+<h1 class="myFirstCss">Welcome to Angular 9!</h1>
+<p>Xin chào bạn : {{ name | lowercase }}</p>
+<p>Bạn đã là {{ age }} tuổi</p>
+
+
+<!-- ngIf -->
+<span *ngIf="age < 18; then trueCondition else falseCondition" class="underAge">Bạn dưới 18 tuổi!</span>
+<br>
+<ng-template #trueCondition>
+  <p>Bạn chưa đủ 18 tuổi !</p>
+</ng-template>
+<ng-template #falseCondition>
+  <p class="overAge">Bạn đã lớn hơn hoặc bằng 18 tuổi</p>
+</ng-template>
+<br>
+<input [(ngModel)]="name">
+<strong>{{ name }}</strong>
+<br>
+
+<button class="btn" (click)="tangTuoi()">Tăng tuổi</button>
+<button class="btn" (click)="giamTuoi()">Giảm tuổi</button>
+<br>
+
+
+
+
+
+
+
+
+
+<!-- Danh sách xe: <br> -->
+<!-- <ul *ngFor="let vehicle of vehicles">
+  <li>{{ vehicle }}</li>
+</ul> -->
+
+<br>
+<!-- <select name="" id="">
+  <option value="" *ngFor="let vehicle of vehicles">{{ vehicle }}</option>
+</select>
+<br> -->
+<!-- Kiểu json : <br>
+<span>{{ vehicles | json }}</span> -->

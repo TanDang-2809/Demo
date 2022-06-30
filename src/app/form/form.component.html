@@ -1,0 +1,23 @@
+<form class="form" action="" (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <label for="name">User Name:</label><br>
+  <input type="text" id="name" class="form-control" name="name" value="username" required [(ngModel)]="name">
+  <br>
+  <span *ngIf="name === ''" AppBold>* Cần phải nhập Name</span>
+  <br>
+  <label for="password">Password:</label><br>
+  <input type="text" id="password" name="password" value="Doe" required [(ngModel)]="password"><br>
+  <span *ngIf="password === ''" AppBold>* Cần phải nhập Password</span><br><br>
+
+  <div class="form-group">
+    <label for="vehicle">Vehicle : </label>
+    <br>
+    <select (change)="selectVehicle($event)">
+      <option value="" *ngFor="let vehicle of vehicles">{{ vehicle }}</option>
+    </select>
+  </div>
+  <!-- Không bắt được sự kiện -->
+
+  <br>
+  <br>
+  <input type="submit" value="submit" [disabled]="!myForm.form.valid">
+</form>

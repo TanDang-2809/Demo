@@ -1,0 +1,44 @@
+<p>about works!</p>
+<!-- posts?.length : nếu mảng có thì lấy độ dài của mảng -->
+<h1>Hello works from about page! Bạn có <span class="postCss">{{ posts?.length }}</span> tin nhắn</h1>
+Số tin nhắn <span class="badge">{{ posts?.length }}</span>
+<h2 AppBold>Tên của bạn là : {{ name }}</h2>
+<h2 AppBold>Tuổi của bạn là : {{ age }}</h2>
+<button class="btn" (click)="tangTuoi()">Tăng tuổi</button>
+<button class="btn" (click)="giamTuoi()">Giảm tuổi</button>
+
+<br>
+
+Comments : <br>
+<span>{{ comments | json }}</span>
+<br>
+<br>
+<!-- in ra một cái object -->
+Comments[0]: <br>
+<span *ngIf="comments">{{ comments[0] | json}}</span>
+<br>
+<br>
+Post : <br>
+<!-- <span>{{ posts | json }}</span> -->
+<ul *ngFor="let post of posts">
+  <li>{{ post | json }}</li>
+</ul>
+<br>
+<br>
+<!-- <button (click)="addPost()">Thêm post mới</button> -->
+<span class="badge">{{ posts?.length }}</span>
+<br>
+<br>
+<!-- Truyền dữ liệu vào bảng -->
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{ post?.id }}</td>
+    <td>{{ post?.title }}</td>
+    <td>{{ post?.author }}</td>
+  </tr>
+</table>

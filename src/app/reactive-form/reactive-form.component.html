@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Học về Form</h1>
+  <!-- <label for="">
+    Name :
+    <input type="text" [formControl]="name">
+  </label>
+  <p>Value : {{ name.value }}</p> -->
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name :
+      <input type="text" formControlName="name" required>
+    </label>
+    <span class="color_error" *ngIf="profileForm.controls.name.invalid">* Cần phải nhập tên</span>
+    <!-- nếu chưa điều giá trị vào thẻ input thì hiện không hợp lệ  -->
+    <br>
+    <label>
+      Age :
+      <input type="number" formControlName="age" required>
+      <!-- required kiểm tra nếu nhập mới cho submit -->
+    </label>
+    <span class="color_error" *ngIf="profileForm.controls.age.invalid">* Cần phải nhập tuổi</span>
+    <br>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </form>
+  <!-- <button (click)="updateName()">Update Name</button> -->
+
+</div>
